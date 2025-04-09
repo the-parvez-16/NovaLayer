@@ -1,0 +1,709 @@
+body {
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #7700ff;
+}
+
+/* Header */
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-weight: bold;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.loader {
+    display: flex;
+    margin: 0.25em 0;
+}
+
+.loader svg {
+    display: flex;
+    align-items: center;
+    width: 15px;
+    height: 30px;
+}
+
+/* Dégradés */
+.gradient-b {
+    stroke: url(#b);
+}
+
+.gradient-c {
+    stroke: url(#c);
+}
+
+.gradient-d {
+    stroke: url(#d);
+}
+
+.dash {
+    animation: dashArray 2s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+}
+
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+        spin 8s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+}
+.lo{
+    font-size: 20px;
+}
+
+nav.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    color: #7700ff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .8s;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #7700ff, #cd6ee5);
+    background-blend-mode: color-burn;
+    color-interpolation-filters: linearRGB;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.nav-links {
+        margin-top: 10px;
+        border-top: 1px #222 solid;
+        padding: 20px 0 20px 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+
+    }
+
+    nav.nav-links.active {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+    }
+
+    .nav-link:hover {
+        all: unset;
+    }
+
+    header {
+        position: relative;
+        flex-direction: column;
+    }
+
+    /* From Uiverse.io by JulanDeAlb */
+    .hamburger {
+        cursor: pointer;
+    }
+
+    .hamburger input {
+        display: none;
+    }
+
+    .hamburger svg {
+        height: 1.5em;
+        transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line-top-bottom {
+        stroke-dasharray: 12 63;
+    }
+
+    .hamburger input:checked+svg {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger input:checked+svg .line-top-bottom {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
+    }
+
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #7700ff, #cd6ee5);
+    color: #fff;
+}
+
+.hero .btn {
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    color: #7700ff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    transition: 3s;
+    background: linear-gradient(135deg, #7700ff, #cd6ee5);
+    background-blend-mode: color-burn;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 3rem 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #7700ff;
+}
+
+/* Services */
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+
+
+
+.service {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    max-width: 280px;
+    position: relative;
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 320px;
+    height: 380px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+
+.service:hover::after {
+    filter: blur(30px);
+}
+
+.service:hover::before {
+    transform: rotate(-90deg) scaleX(1.2) scaleY(0.84);
+}
+
+.service-img {
+    max-width: 280px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.spinner {
+    position: absolute;
+    width: 70.4px;
+    height: 70.4px;
+    --clr: rgb(247, 197, 159);
+    --clr-alpha: rgb(247, 197, 159, .1);
+    animation: spinner 1.6s infinite ease;
+    transform-style: preserve-3d;
+    z-index: -5;
+}
+
+.s1 {
+    left: 0px;
+}
+
+.s2 {
+    right: 0px;
+}
+
+.s3 {
+    left: 0px;
+    bottom: 250px;
+}
+
+.s4 {
+    right: 0px;
+    bottom: 250px;
+}
+
+.spinner>div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 3.5px solid var(--clr);
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(35.2px);
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+
+/* About & Our Work */
+
+.about,
+.owork,
+.contact {
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #e8e8e8;
+    margin-bottom: 10px;
+    --color: #E1E1E1;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+}
+
+.about p,
+.owork ul,
+.contact p {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.owork ul {
+    list-style: none;
+    padding: 0;
+}
+
+.owork li {
+    margin: 0.5rem 0;
+}
+.project-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project-card {
+    margin: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: hidden;
+    color: black;
+}
+.project-img{
+    z-index: 5;
+    height: 100px;
+    width: 150px;
+}
+
+.project-card:hover {
+    border: 1px solid #7700ff;
+    transform: scale(1.05);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background: linear-gradient(-45deg, #7700ff 0%, #cd6ee5 100%);
+    height: 200%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+.project-card::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+.project-card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.faq-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.faq-button svg {
+    height: 1.5em;
+    fill: white;
+}
+
+.faq-button:hover svg {
+    animation: jello-vertical 0.7s both;
+}
+
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.tooltip {
+    position: absolute;
+    top: -20px;
+    opacity: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #7700ff;
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    bottom: -15%;
+    transition-duration: 0.3s;
+}
+
+.faq-button:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: whitesmoke;
+}
+
+/* From Uiverse.io by ahmed150up2 */
+.social-links {
+    display: flex;
+    height: 70px;
+    width: 270px;
+}
+
+.social-links svg {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.social-links .social-link1,
+.social-links .social-link2,
+.social-links .social-link3,
+.social-links .social-link4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    font-size: 24px;
+    transition: 0.25s;
+    border-radius: 50px;
+}
+
+.social-links .social-link1:hover {
+    background-color: #1a1e22;
+    animation: bounce_613 0.4s linear;
+}
+
+.social-links .social-link2:hover {
+    background-color: #0a66c2;
+    animation: bounce_613 0.4s linear;
+}
+
+
+.social-links .social-link3:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    animation: bounce_613 0.4s linear;
+}
+
+.social-links .social-link4:hover {
+    background-color: #5865f2;
+    animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    nav a {
+        margin-left: 0.75rem;
+    }
+
+    .service-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
