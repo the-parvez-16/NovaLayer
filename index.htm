@@ -123,14 +123,15 @@
                     <p>Reels, intros, promos—we craft visuals that speak.</p>
                 </div>
                 <div class="service" style="height: 340px;">
-                    <div class="service-img" style="display: flex; justify-content: center; align-items: center;background: #212121; ">
+                    <div class="service-img"
+                        style="display: flex; justify-content: center; align-items: center;background: #212121; ">
                         <div class="glitch">Coming Soon...</div>
                     </div>
                     <h3>More</h3>
                     <p>Coming Soon...</p>
                 </div>
             </div>
-            
+
             <div class="spinner s1">
                 <div></div>
                 <div></div>
@@ -216,6 +217,21 @@
         <!-- Contact -->
         <section class="contact" id="contact">
             <h2>Contact Us</h2>
+            <div class="form-container">
+                <form class="form" id="contactForm">
+                    <div class="form-group">
+                        <label for="email">Company Email</label>
+                        <input type="email" id="email" name="email" placeholder="eg : xyz@xyz.com" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">How Can We Help You?</label>
+                        <textarea name="msg" id="msg" rows="10" cols="50" required=""></textarea>
+                    </div>
+                    <button class="form-submit-btn" type="submit">Submit</button>
+                </form>
+                <div id="successMsg" class="success-message">✅ Message sent successfully!</div>
+
+            </div>
             <p>Email: <strong><a href="mailto:novalayer@mine.com">novalayer@mine.com</a></strong></p>
             <p>Let’s build something awesome together.</p>
         </section>
@@ -271,5 +287,17 @@
     </footer>
 
     <script src="src/scripts/script.js"></script>
+
+    <!-- Firebase SDKs first -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+    <!-- Then your firebase config -->
+    <script src="src/scripts/firebase.js"></script>
+
+    <!-- Then your form submit logic -->
+    <script src="src/scripts/form.js"></script>
+
 </body>
+
 </html>
