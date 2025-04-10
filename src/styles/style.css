@@ -231,7 +231,7 @@ h2 {
 }
 
 .service-img {
-    max-width: 280px;
+    width: 280px;
     height: 200px;
     border-radius: 8px;
 }
@@ -268,11 +268,13 @@ h2 {
 .owork li {
     margin: 0.5rem 0;
 }
-.project-list{
+
+.project-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .project-card {
     margin: 1rem;
     box-sizing: border-box;
@@ -295,7 +297,8 @@ h2 {
     overflow: hidden;
     color: black;
 }
-.project-img{
+
+.project-img {
     z-index: 5;
     height: 100px;
     width: 200px;
@@ -327,29 +330,8 @@ h2 {
 .project-card:active {
     transform: scale(0.95) rotateZ(1.7deg);
 }
- 
-@keyframes blinkCursor {
-    50% {
-      border-right-color: transparent;
-    }
-  }
-  
-  @keyframes typeAndDelete {
-    0%,
-    10% {
-      width: 0;
-    }
-    45%,
-    55% {
-      width: 6.2em;
-    } /* adjust width based on content */
-    90%,
-    100% {
-      width: 0;
-    }
-  }
-  
-  .terminal-loader {
+
+.terminal-loader {
     border: 0.1em solid #333;
     background-color: #1a1a1a;
     color: #0f0;
@@ -362,9 +344,9 @@ h2 {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-  }
-  
-  .terminal-header {
+}
+
+.terminal-header {
     position: absolute;
     top: 0;
     left: 0;
@@ -375,50 +357,51 @@ h2 {
     border-top-right-radius: 4px;
     padding: 0 0.4em;
     box-sizing: border-box;
-  }
-  
-  .terminal-controls {
+}
+
+.terminal-controls {
     float: right;
-  }
-  
-  .control {
+}
+
+.control {
     display: inline-block;
     width: 0.6em;
     height: 0.6em;
     margin-left: 0.4em;
     border-radius: 50%;
     background-color: #777;
-  }
-  
-  .control.close {
+}
+
+.control.close {
     background-color: #e33;
-  }
-  
-  .control.minimize {
+}
+
+.control.minimize {
     background-color: #ee0;
-  }
-  
-  .control.maximize {
+}
+
+.control.maximize {
     background-color: #0b0;
-  }
-  
-  .terminal-title {
+}
+
+.terminal-title {
     float: left;
     line-height: 1.5em;
     color: #eee;
-  }
-  
-  .text {
+}
+
+.text {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.2em solid green; /* Cursor */
+    border-right: 0.2em solid green;
+    /* Cursor */
     animation:
-      typeAndDelete 4s steps(11) infinite,
-      blinkCursor 0.5s step-end infinite alternate;
+        typeAndDelete 4s steps(14) infinite,
+        blinkCursor 0.5s step-end infinite alternate;
     margin-top: 1.5em;
-  }
-  
+}
+
 
 .faq-button {
     width: 50px;
