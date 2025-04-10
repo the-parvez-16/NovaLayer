@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaLayer | Digital Agency</title>
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="src/styles/animation.css">
+    <meta charset="UTF-8">
+    <title>Admin Panel - NovaLayer</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/animation.css">
+    <link rel="stylesheet" href="../styles/admin.css">
 </head>
 
 <body>
-
     <!-- Header -->
     <header>
         <div class="header1">
@@ -45,9 +44,9 @@
                         style="--rotation-duration:0ms; --rotation-direction:normal;" viewBox="0 0 64 64" height="64"
                         width="64" class="inline-block">
                         <path stroke-linejoin="round" stroke-linecap="round" stroke-width="10" stroke="url(#c)" d="M 32 32
-                      m 0 -27
-                      a 27 27 0 1 1 0 54
-                      a 27 27 0 1 1 0 -54" class="spin" id="o" pathLength="360"></path>
+                          m 0 -27
+                          a 27 27 0 1 1 0 54
+                          a 27 27 0 1 1 0 -54" class="spin" id="o" pathLength="360"></path>
                     </svg>
 
                     <span class="lo">V</span>
@@ -92,161 +91,18 @@
         </div>
         <!-- Navigation Links -->
         <nav class="nav-links">
-            <a href="#home" class="nav-link">Home</a>
+            <a href="../../index.htm" class="nav-link">Home</a>
             <a href="#services" class="nav-link">Services</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#owork" class="nav-link">OurWork</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="src/pages/admin.html" class="nav-link admin">Admin</a>
         </nav>
     </header>
+    <h1>Admin Panel</h1>
+    <div id="messages-container">
+        <h2>Client Details</h2>
+    </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <h1>We Build Websites & Edit Videos</h1>
-            <p>Modern design | Creative storytelling | Digital done right</p>
-            <a href="#contact" class="btn">Let's Work Together</a>
-        </section>
-
-        <!-- Services -->
-        <section class="services" id="services">
-            <h2>Our Services</h2>
-            <div class="service-box">
-                <div class="service">
-                    <img class="service-img" src="images/webDev.jpg" alt="">
-                    <h3>Website Development</h3>
-                    <p>Responsive, fast, and clean websites tailored to your brand.</p>
-                </div>
-                <div class="service">
-                    <img class="service-img" src="images/videoEdit.jpg" alt="">
-                    <h3>Video Editing</h3>
-                    <p>Reels, intros, promos—we craft visuals that speak.</p>
-                </div>
-                <div class="service" style="height: 340px;">
-                    <div class="service-img"
-                        style="display: flex; justify-content: center; align-items: center;background: #212121; ">
-                        <div class="glitch">Coming Soon...</div>
-                    </div>
-                    <h3>More</h3>
-                    <p>Coming Soon...</p>
-                </div>
-            </div>
-
-            <div class="spinner s1">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="spinner s2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="spinner s3">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="spinner s4">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </section>
-
-        <!-- About Us -->
-        <section class="about" id="about">
-            <h2>About Us</h2>
-            <p>We’re a creative duo helping brands and creators build their online presence with impactful visuals and
-                smooth digital experiences. Simple ideas, done well.
-            </p>
-        </section>
-
-        <!-- Portfolio -->
-        <section class="owork" id="owork">
-            <h2>Our Work</h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <img class="project-img" src="images/eduPortLogo.svg" alt="">
-                    <h3 style="z-index: 5;">Eduport</h3>
-                    <p style="z-index: 5;"><strong>A education tech website</strong> – Clean, mobile-first design.</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-img" src="" alt="">
-                    <h3 style="z-index: 5;">Nexole</h3>
-                    <p style="z-index: 5;"><strong>...</strong> – ...</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-img" src="images/reel.JPG" style="mix-blend-mode:darken;" alt="">
-                    <h3 style="z-index: 5;">Reels</h3>
-                    <p style="z-index: 5;"><strong>Short Aesthetic reels</strong> – Fast-paced, engaging storytelling.
-                    </p>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <div class="terminal-loader">
-                            <div class="terminal-header">
-                                <div class="terminal-title">Status</div>
-                                <div class="terminal-controls">
-                                    <div class="control close"></div>
-                                    <div class="control minimize"></div>
-                                    <div class="control maximize"></div>
-                                </div>
-                            </div>
-                            <div class="text">Coming Soon...</div>
-                        </div>
-                    </div>
-                    <h3 style="z-index: 5;">More</h3>
-                    <p style="z-index: 5;"><strong>Coming Soon</strong>...</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="contact" id="contact">
-            <h2>Contact Us</h2>
-            <div class="form-container">
-                <form class="form" id="contactForm">
-                    <div class="form-group">
-                        <label for="email">Company Email</label>
-                        <input type="email" id="email" name="email" placeholder="eg : xyz@xyz.com" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="msg">How Can We Help You?</label>
-                        <textarea name="msg" id="msg" rows="10" cols="50" required=""></textarea>
-                    </div>
-                    <button class="form-submit-btn" type="submit">Submit</button>
-                </form>
-                <div id="successMsg" class="success-message">✅ Message sent successfully!</div>
-
-            </div>
-            <p>Email: <strong><a href="mailto:novalayer@mine.com">novalayer@mine.com</a></strong></p>
-            <p>Let’s build something awesome together.</p>
-        </section>
-
-        <button class="faq-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                <path
-                    d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z">
-                </path>
-            </svg>
-            <span class="tooltip">FAQ</span>
-        </button>
-
-    </main>
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 NovaLayer. All rights reserved.</p>
@@ -287,18 +143,12 @@
         </div>
     </footer>
 
-    <script src="src/scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 
-    <!-- Firebase SDKs first -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-
-    <!-- Then your firebase config -->
-    <script src="src/scripts/firebase.js"></script>
-
-    <!-- Then your form submit logic -->
-    <script src="src/scripts/form.js"></script>
-
+    <script src="../scripts/firebase.js"></script>
+    <script src="../scripts/admin.js"></script>
 </body>
 
 </html>
