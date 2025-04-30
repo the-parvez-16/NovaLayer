@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidale Infotech - High-Converting Thumbnail Design Services</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/service.css">
+    <style>
+        /* Black Theme Styles */
+        :root {
+            --primary: #000000;
+            --secondary: #111111;
+            --accent: #ff00ff;
+            --text: #ffffff;
+            --text-light: #aaaaaa;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.3);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .portfolio-category {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../../images/NL-removebg-preview.png" width="75" height="75" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#" class="active">Thumbnail Design</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">High-Converting Thumbnail Design</h1>
+                <p class="hero-subtitle">Professional thumbnail designs that increase your click-through rates and grow
+                    your audience</p>
+                <p class="hero-subtitle">With data-driven design strategies, we create thumbnails that stand out in
+                    crowded feeds and drive more views.</p>
+
+                <div class="features">
+                    <ul>
+                        <li>Psychology-driven designs</li>
+                        <li>Platform-specific optimization</li>
+                        <li>Custom illustrations</li>
+                        <li>Eye-catching typography</li>
+                        <li>Fast 24-hour turnaround</li>
+                        <li>Unlimited revisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Thumbnail Services</h2>
+            <div class="services-grid">
+                <!-- YouTube Thumbnails -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="YouTube Thumbnails"
+                        class="card-img">
+                    <h3>YouTube Thumbnails</h3>
+                    <p>High-click-rate thumbnails designed to stand out in YouTube's competitive landscape with bold
+                        text and compelling imagery.</p>
+                    <button class="learn-more-btn" data-service="youtube">Learn More <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- TikTok Thumbnails -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok Thumbnails"
+                        class="card-img">
+                    <h3>TikTok Thumbnails</h3>
+                    <p>Eye-catching cover images for your TikTok videos that increase profile visits and video
+                        completion rates.</p>
+                    <button class="learn-more-btn" data-service="tiktok">Learn More <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Instagram Thumbnails -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Thumbnails"
+                        class="card-img">
+                    <h3>Instagram Thumbnails</h3>
+                    <p>Cohesive and branded thumbnails for IGTV, Reels, and feed posts that maintain your aesthetic
+                        while driving engagement.</p>
+                    <button class="learn-more-btn" data-service="instagram">Learn More <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Podcast Thumbnails -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2693/2693491.png" alt="Podcast Thumbnails"
+                        class="card-img">
+                    <h3>Podcast Thumbnails</h3>
+                    <p>Professional episode artwork that communicates your content at a glance across podcast platforms.
+                    </p>
+                    <button class="learn-more-btn" data-service="podcast">Learn More <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Course Thumbnails -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" alt="Course Thumbnails"
+                        class="card-img">
+                    <h3>Course Thumbnails</h3>
+                    <p>High-converting thumbnails for online courses that communicate value and increase enrollment
+                        rates.</p>
+                    <button class="learn-more-btn" data-service="course">Learn More <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Custom Illustrations -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Custom Illustrations"
+                        class="card-img">
+                    <h3>Custom Illustrations</h3>
+                    <p>Unique illustrated thumbnails that establish your brand identity and make your content instantly
+                        recognizable.</p>
+                    <button class="learn-more-btn" data-service="illustrations">Learn More <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Thumbnail Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/ff00ff/ffffff?text=YouTube+Gaming"
+                        alt="YouTube Gaming Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Gaming Thumbnail</h3>
+                        <span class="portfolio-category">YouTube</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/ff69b4/ffffff?text=TikTok+Fitness"
+                        alt="TikTok Fitness Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Fitness Thumbnail</h3>
+                        <span class="portfolio-category">TikTok</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/9c27b0/ffffff?text=Podcast+Cover" alt="Podcast Cover"
+                        class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Podcast Episode</h3>
+                        <span class="portfolio-category">Spotify/Apple</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/e91e63/ffffff?text=Instagram+Reel"
+                        alt="Instagram Reel Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Beauty Reel</h3>
+                        <span class="portfolio-category">Instagram</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/2196f3/ffffff?text=Online+Course"
+                        alt="Online Course Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Course Thumbnail</h3>
+                        <span class="portfolio-category">Udemy</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/4caf50/ffffff?text=Illustrated+Thumbnail"
+                        alt="Illustrated Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Custom Illustration</h3>
+                        <span class="portfolio-category">Branded Content</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <button class="close-modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Service Details</h2>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Content will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+                    <h3 class="text-white mb-4">NovaLayer</h3>
+                    <p>We help brands stand out with innovative digital solutions and creative strategies.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575135606684"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/AniketRana23690"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/novalayer_/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nova-layer-b11b1035b/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0 animate-on-scroll">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0 animate-on-scroll">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="../service-pages/service-webdev.html">Web Development</a></li>
+                        <li><a href="../service-pages/service-video.html">Video Editing</a></li>
+                        <li><a href="../service-pages/service-logo.html">Logo Design</a></li>
+                        <li><a href="../service-pages/service-script.html">Script Writing</a></li>
+                        <li><a href="../service-pages/service-thumb.html">Thumbnail Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023 CreativeStudio. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                        <a href="#" class="text-white-50">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+
+    <!-- Particle.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../scripts/particle.js"></script>
+</body>
+
+</html>

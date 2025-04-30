@@ -1,7 +1,9 @@
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const usrname = document.getElementById("usrname").value.trim();
     const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("selected-service").value;
     const message = document.getElementById("msg").value.trim();
     const successMsg = document.getElementById("successMsg");
 
@@ -18,8 +20,10 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     }
 
     try {
-        await db.collection("messages").add({
+        await window.db.collection("messages").add({
+            usrname,
             email,
+            service,
             message,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });

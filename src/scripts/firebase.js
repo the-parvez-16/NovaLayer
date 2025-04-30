@@ -1,14 +1,18 @@
-
+// Initialize Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyD7h3sZATJyMtUuIC_2fwTw4h5ij2hCkCQ",
-    authDomain: "novalayer-54c46.firebaseapp.com",
-    projectId: "novalayer-54c46",
-    storageBucket: "novalayer-54c46.firebasestorage.app",
-    messagingSenderId: "788870682936",
-    appId: "1:788870682936:web:25f8fcd12e22c4fd9949cd",
-    measurementId: "G-STSFRTEEJT"
+    apiKey: FIREBASE_API_KEY,
+    authDomain: FIREBASE_AUTH_DOMAIN,
+    projectId: FIREBASE_PROJECT_ID,
+    storageBucket: FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+    appId: FIREBASE_APP_ID,
+    measurementId: FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
+// Initialize Firebase App
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+
+// Access Firestore
+window.db = firebase.firestore();
+
+// Now you can use `db` for Firestore operations

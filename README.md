@@ -5,7 +5,7 @@
 - 🔧 Website Development
 - 🎬 Video Editing
 
-> Live at: [https://novalayer.vercel.app](https://novalayer.vercel.app)
+> Live at: [https://nova-layer.vercel.app](https://nova-layer.vercel.app)
 
 ---
 
@@ -41,7 +41,6 @@ To become a one-stop agency offering web development, video editing, script writ
 
 - Portfolio with images and GitHub/YouTube links  
 - Contact form with email integration  
-- Dark mode toggle 🌙
 
 ---
 
@@ -50,5 +49,5 @@ To become a one-stop agency offering web development, video editing, script writ
 Clone the repo and run locally:
 
 ```bash
-git clone https://github.com/the-parvez-16/NovaLayer.git
+git clone https://github.com/Aniket9rana/nova-layer.git
 cd NovaLayer
