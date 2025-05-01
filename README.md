@@ -5,7 +5,7 @@
 - 🔧 Website Development
 - 🎬 Video Editing
 
-> Live at: [https://nova-layer.vercel.app](https://nova-layer.vercel.app)
+> Live at: [https://nova-layer.in](https://nova-layer.in)
 
 ---
 
@@ -33,6 +33,7 @@ To become a one-stop agency offering web development, video editing, script writ
 - HTML5  
 - CSS3  
 - JavaScript (vanilla)
+- Node.js
 - Hosted on [Vercel](https://vercel.com)
 
 ---
@@ -51,3 +52,35 @@ Clone the repo and run locally:
 ```bash
 git clone https://github.com/Aniket9rana/nova-layer.git
 cd NovaLayer
+```
+
+## 🧬 Structure
+
+```
+NovaLayer/                ← root
+├── public/               ← contains all static files
+│   ├── src/
+│   │   ├── service-pages/
+│   │   │   └── home.html
+│   │   ├── scripts/
+│   │   │   ├── form.js
+│   │   │   └── script.js
+│   │   └── styles/
+│   │       ├── footer.css
+│   │       ├── form.css
+│   │       └── style.css
+│   └── images/
+│       ├── NL-removebg-preview.png
+│       ├── Screenshot 2025-03-24 162604.png
+│       └── freepik__background__34624.png
+|
+├── backend/
+|   ├── package.json
+|   ├── package-lock.json    
+│   └── server.js
+|
+├── index.html            
+├── vercel.json 
+├── .gitignore         
+└── README.md
+```
