@@ -1,34 +1,33 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "backend/server.js",
-            "use": "@vercel/node"
-        },
-        {
-            "src": "index.html",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "src/service-pages/home.html",
-            "use": "@vercel/static"
-        }
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      }
     ],
     "routes": [
-        {
-            "src": "/submit-form",
-            "dest": "backend/server.js",
-            "methods": [
-                "POST"
-            ]
-        },
-        {
-            "src": "/home",
-            "dest": "src/service-pages/home.html"
-        },
-        {
-            "src": "/",
-            "dest": "/index.html"
-        }
+      {
+        "src": "/submit-form",
+        "dest": "backend/server.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/home",
+        "dest": "public/src/service-pages/home.html"
+      },
+      {
+        "src": "/",
+        "dest": "/index.html"
+      }
     ]
-}
+  }
+  
