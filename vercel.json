@@ -10,7 +10,7 @@
             "use": "@vercel/static"
         },
         {
-            "src": "src/pages/home.html",
+            "src": "src/service-pages/home.html",
             "use": "@vercel/static"
         }
     ],
@@ -24,7 +24,7 @@
         },
         {
             "src": "/home",
-            "dest": "/src/pages/home.html"
+            "dest": "src/service-pages/home.html"
         },
         {
             "src": "/",
