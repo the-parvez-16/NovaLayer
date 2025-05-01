@@ -1,36 +1,44 @@
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
     e.preventDefault();
-  
-    const usrname = document.getElementById("usrname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const service = document.getElementById("selected-service").value;
-    const message = document.getElementById("msg").value.trim();
-    const successMsg = document.getElementById("successMsg");
-  
-    // Basic validation
-    if (!email || !message) {
-      alert("Please fill in all fields.");
-      return;
+
+    const formData = {
+        usrname: document.getElementById("usrname").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        service: document.getElementById("selected-service").value,
+        message: document.getElementById("msg").value.trim()
+    };
+
+    // Validation
+    if (!formData.email || !formData.message) {
+        return alert("Email and message are required.");
     }
-  
+
+    // Smart URL detection
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const API_URL = isLocal ? 'http://localhost:3000' : 'https://novalayer.vercel.app';
+
     try {
-      const response = await fetch('/submit-form', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ usrname, email, service, message })
-      });
-  
-      const result = await response.json();
-  
-      if (response.ok) {
-        successMsg.style.display = "block";
-        setTimeout(() => { successMsg.style.display = "none"; }, 3000);
+        const response = await fetch(`${API_URL}/submit-form`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+
+        // Handle empty responses
+        const text = await response.text();
+        const result = text ? JSON.parse(text) : {};
+
+        if (!response.ok) throw new Error(result.error || 'Submission failed');
+
+        // Success
+        document.getElementById("successMsg").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("successMsg").style.display = "none";
+        }, 3000);
         document.getElementById("contactForm").reset();
-      } else {
-        throw new Error(result.error || "Submission failed");
-      }
+
     } catch (error) {
-      console.error("Error:", error);
-      alert("Error: " + error.message);
+        console.error("Error:", error);
+        alert("Error: " + error.message);
     }
-  });
+});
