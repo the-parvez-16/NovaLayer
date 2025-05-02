@@ -15,7 +15,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
 
     // Smart URL detection
     const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const API_URL = isLocal ? 'http://localhost:3000' : 'https://novalayer.vercel.app';
+    const API_URL = isLocal ? 'http://localhost:3000' : 'https://novalayer.in';
 
     try {
         const response = await fetch(`${API_URL}/submit-form`, {
