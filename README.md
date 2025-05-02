@@ -61,6 +61,12 @@ NovaLayer/                ← root
 ├── public/               ← contains all static files
 │   ├── src/
 │   │   ├── service-pages/
+│   │   │   ├── service-webdev.html
+│   │   │   ├── service-logo.html
+│   │   │   ├── service-script.html
+│   │   │   ├── service-thumb.html
+│   │   │   ├── service-video.html
+│   │   │   ├── service-brand.html
 │   │   │   └── home.html
 │   │   ├── scripts/
 │   │   │   ├── form.js
@@ -70,9 +76,7 @@ NovaLayer/                ← root
 │   │       ├── form.css
 │   │       └── style.css
 │   └── images/
-│       ├── NL-removebg-preview.png
-│       ├── Screenshot 2025-03-24 162604.png
-│       └── freepik__background__34624.png
+│       └──images 
 |
 ├── backend/
 |   ├── package.json
