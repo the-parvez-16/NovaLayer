@@ -5,7 +5,7 @@
 - 🔧 Website Development
 - 🎬 Video Editing
 
-> Live at: [https://nova-layer.in](https://nova-layer.in)
+> Live at: [https://novalayer.in](https://novalayer.in)
 
 ---
 
