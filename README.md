@@ -34,8 +34,6 @@ To become a one-stop agency offering web development, video editing, script writ
 - CSS3  
 - JavaScript (vanilla)
 - Node.js
-- Hosted on [Vercel](https://vercel.com)
-
 ---
 
 ## 🛠 Future Plans
@@ -50,7 +48,7 @@ To become a one-stop agency offering web development, video editing, script writ
 Clone the repo and run locally:
 
 ```bash
-git clone https://github.com/Aniket9rana/nova-layer.git
+git clone https://github.com/the-parvez-16/NovaLayer.git
 cd NovaLayer
 ```
 
