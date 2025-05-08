@@ -217,26 +217,52 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center mb-5 animate-on-scroll">
                         <h2 class="mb-3">What Our Clients Say</h2>
-                        <p>Hear from businesses that have transformed their digital presence with our help.</p>
+                        <p>Hear from clients that have transformed their digital presence with our help.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 animate-on-scroll">
                         <div class="testimonial-card">
-                            <p>"NovaLayer transformed my vision into a stunning visual story — professional, creative portfolio."</p>
+                            <p>"NovaLayer transformed my vision into a stunning visual story — professional, creative
+                                portfolio."</p>
                             <div class="d-flex align-items-center mt-4">
                                 <!-- <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client"
                                     class="client-img me-3"> -->
                                 <div>
-                                    <h5 class="mb-0">Tarun</h5>
-                                    <small class="text-muted">Student</small>
+                                    <h5 class="mb-0">Ganesh</h5>
+                                    <small class="text-muted">Video Editor</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 animate-on-scroll">
                         <div class="testimonial-card">
-                            <p>"NovaLayer has done an excellent job with video shooting and recording — truly outstanding work! I'm thoroughly impressed by their professionalism and quality. Highly recommended for anyone looking for top-notch media services."</p>
+                            <p id="testimonial">
+                                NovaLayer has done an excellent job with video shooting and recording —
+                                <span id="dots">... <span class="read-more-link" onclick="toggleText()">Read
+                                        more</span></span>
+                                <span id="more" style="display: none;">
+                                    truly outstanding work! I'm thoroughly impressed by their professionalism and
+                                    quality.
+                                    Highly recommended for anyone looking for top-notch media services.
+                                    <span class="read-more-link" onclick="toggleText()"> Read less</span>
+                                </span>
+                            </p>
+                            <script>
+                                function toggleText() {
+                                    var dots = document.getElementById("dots");
+                                    var more = document.getElementById("more");
+
+                                    if (more.style.display === "none") {
+                                        more.style.display = "inline";
+                                        dots.style.display = "none";
+                                    } else {
+                                        more.style.display = "none";
+                                        dots.style.display = "inline";
+                                    }
+                                }
+                            </script>
+
                             <div class="d-flex align-items-center mt-4">
                                 <!-- <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client"
                                     class="client-img me-3"> -->
@@ -267,14 +293,52 @@
         <!-- Contact Section -->
         <section id="contact" class="py-5">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row d-flex justify-content-center">
                     <div class="col-lg-8 text-center mb-5 animate-on-scroll">
                         <h2 class="mb-3">Get In Touch</h2>
                         <p>Have a project in mind or want to learn more about our services? Drop us a message.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="d-flex justify-content-center animate-on-scroll">
+                    <div class="col-lg-6 animate-on-scroll mb-3 d-lg-flex justify-content-center">
+                        <div class="ps-lg-5 mt-5 mt-lg-0 ms-4">
+                            <h4 class="mb-4">Contact Information</h4>
+                            <div class="d-flex mb-4">
+                                <i class="fas fa-envelope me-3 mt-1 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-0">Email</h5>
+                                    <p class="mb-0">novalayer1@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <i class="fas fa-phone me-3 mt-1 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-0">Phone</h5>
+                                    <p class="mb-0">+91 7275961008</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <i class="fas fa-map-marker-alt me-3 mt-1 text-primary"></i>
+                                <div>
+                                    <h5 class="mb-0">Address</h5>
+                                    <p class="mb-0">Bangalore, India</p>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h5 class="mb-3">Follow Us</h5>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/profile.php?id=61575135606684"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="https://x.com/AniketRana23690"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/novalayer_/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/nova-layer-b11b1035b/"><i
+                                            class="fab fa-linkedin-in"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 animate-on-scroll d-flex justify-content-center">
                         <div class="form-container">
                             <form class="form" id="contactForm" method="post">
                                 <div class="form-group">
@@ -305,44 +369,6 @@
                                 <button class="form-submit-btn" type="submit">Send Message</button>
                             </form>
                             <div id="successMsg" class="success-message text-center">✅ Message sent successfully!</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 animate-on-scroll">
-                        <div class="ps-lg-5 mt-5 mt-lg-0">
-                            <h4 class="mb-4">Contact Information</h4>
-                            <div class="d-flex mb-4">
-                                <i class="fas fa-envelope me-3 mt-1 text-primary"></i>
-                                <div>
-                                    <h5 class="mb-0">Email</h5>
-                                    <p class="mb-0">novalayer1@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-4">
-                                <i class="fas fa-phone me-3 mt-1 text-primary"></i>
-                                <div>
-                                    <h5 class="mb-0">Phone</h5>
-                                    <p class="mb-0">+91 9548357723</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-4">
-                                <i class="fas fa-map-marker-alt me-3 mt-1 text-primary"></i>
-                                <div>
-                                    <h5 class="mb-0">Address</h5>
-                                    <p class="mb-0">336 Yello Living, Bengaluru</p>
-                                </div>
-                            </div>
-                            <div class="mt-5">
-                                <h5 class="mb-3">Follow Us</h5>
-                                <div class="social-icons">
-                                    <a href="https://www.facebook.com/profile.php?id=61575135606684"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a href="https://x.com/AniketRana23690"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/novalayer_/"><i class="fab fa-instagram"></i></a>
-                                    <a href="https://www.linkedin.com/in/nova-layer-b11b1035b/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

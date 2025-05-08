@@ -354,6 +354,11 @@ navbar-brand::after {
     line-height: 1;
 }
 
+.read-more-link {
+    color: var(--primary);
+    cursor: pointer;
+}
+
 .client-img {
     width: 70px;
     height: 70px;
