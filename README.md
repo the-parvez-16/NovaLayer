@@ -85,6 +85,9 @@ NovaLayer/                ← root
 |   ├── package-lock.json    
 │   └── server.js
 |
+├── assets/
+|   └── robot.splinecode
+|
 ├── index.html            
 ├── vercel.json 
 ├── .gitignore         
