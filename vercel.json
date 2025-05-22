@@ -1,45 +1,34 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/submit-form",
-      "dest": "backend/server.js",
-      "methods": [
-        "POST"
-      ]
-    },
-    {
-      "src": "/home",
-      "dest": "public/src/service-pages/home.html"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/submit-form",
+        "dest": "backend/server.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/home",
+        "dest": "public/src/service-pages/home.html"
+      },
+      {
+        "src": "/",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  
+  
