@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js" as="script">
+
     <style>
         :root {
             --primary-text: #ffffff;
@@ -24,9 +27,10 @@
             --accent-blue: #3b82f6;
         }
 
-        *{
+        * {
             overflow: hidden;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: black;
@@ -76,6 +80,7 @@
         .innovation-section {
             width: 100%;
             padding: 100px 0;
+            pointer-events: none;
         }
 
         .container {
@@ -196,6 +201,7 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+            pointer-events: all;
         }
 
         .cta-button::before {
@@ -309,10 +315,9 @@
         .robot {
             position: absolute;
             top: 0%;
-
             z-index: -1;
             animation: slideToRight 5s ease-in-out forwards;
-
+            pointer-events: all;
         }
 
         @keyframes slideToRight {
@@ -328,9 +333,15 @@
 </head>
 
 <body>
+    <!-- Loader div for 3D Robot -->
+    <div id="spline-loader"
+        style="height: 30%;position: absolute; top: 50%; left: 70%; transform: translate(-50%, -50%);z-index: 10;">
+        <img src="public/images/loader.gif" alt="Loading..." height="100%" width="100%" />
+    </div>
+
     <!-- 3D Robot Background -->
     <div class="image-gradient">
-        <img src="public/images/Screenshot 2025-04-13 194218.png" alt="">
+        <img src="public/images/bg.png" alt="">
     </div>
 
     <div>
@@ -345,30 +356,23 @@
 
                             <p class="sub-text animate__animated">Web design | Thumbnail | Logo Design | Video Editing |
                                 Script Writing</p>
-
-
-
                             <a href="public/src/service-pages/home.html" class="cta-button animate__animated">
                                 Discover More <i class="bi bi-arrow-up-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <spline-viewer class="robot"
-                    url="https://prod.spline.design/UN1iy9IiP-YJSLZZ/scene.splinecode"></spline-viewer>
             </section>
         </div>
 
     </div>
 
-    <!-- Content Overlay -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <!-- Content Overlay & Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js" defer></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- GSAP for advanced animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <!-- Spline Viewer -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -404,6 +408,26 @@
                     gsap.to(pill, { scale: 1, duration: 0.3, ease: "power2.out" });
                 });
             });
+        });
+    </script>
+    <script type="module" defer>
+        window.addEventListener('load', () => {
+            const spline = document.createElement('spline-viewer');
+            spline.className = "robot";
+            spline.setAttribute('url', 'assets/robot.splinecode');
+            document.querySelector('.innovation-section').appendChild(spline);
+
+            const loaderInterval = setInterval(() => {
+                const canvas = spline.shadowRoot?.querySelector('canvas');
+                if (canvas) {
+                    // Check if canvas has width and height — assume loaded
+                    if (canvas.width > 0 && canvas.height > 0) {
+                        document.getElementById('spline-loader')?.remove();
+                        clearInterval(loaderInterval);
+                    }
+                }
+            }, 500);
+
         });
     </script>
 </body>

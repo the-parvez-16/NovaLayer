@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `
         },
-        //Thumbnail
+        //Thumbnail design
         youtube: {
             title: "YouTube Thumbnail Design",
             content: `
@@ -873,6 +873,164 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </div>
             `
+        },
+        //brand strategy
+        positioning: {
+            title: "Brand Positioning",
+            content: `
+        <div class="service-details">
+            <h3>Defining Your Brand's Unique Place</h3>
+            <p>We help you establish a clear and compelling brand positioning that resonates with your target audience.</p>
+            
+            <h4>Key Aspects:</h4>
+            <ul>
+                <li>Market analysis and competitor benchmarking</li>
+                <li>Identifying unique selling propositions (USPs)</li>
+                <li>Target audience segmentation</li>
+                <li>Brand messaging alignment</li>
+                <li>Positioning statement development</li>
+            </ul>
+            
+            <h4>Benefits of Effective Brand Positioning:</h4>
+            <ul>
+                <li>Increased brand recognition</li>
+                <li>Stronger customer loyalty</li>
+                <li>Enhanced competitive advantage</li>
+                <li>Clear communication of brand values</li>
+                <li>Improved marketing effectiveness</li>
+            </ul>
+        </div>
+        `
+        },
+        research: {
+            title: "Market Research",
+            content: `
+        <div class="service-details">
+            <h3>In-Depth Market Insights</h3>
+            <p>We conduct comprehensive market research to inform your brand strategy and decision-making.</p>
+            
+            <h4>Research Methods:</h4>
+            <ul>
+                <li>Surveys and questionnaires</li>
+                <li>Focus groups and interviews</li>
+                <li>Competitive analysis</li>
+                <li>Consumer behavior studies</li>
+                <li>Market trend analysis</li>
+            </ul>
+            
+            <h4>Deliverables:</h4>
+            <ul>
+                <li>Detailed research reports</li>
+                <li>Data visualization and insights</li>
+                <li>Recommendations for strategy development</li>
+                <li>Ongoing market monitoring</li>
+            </ul>
+        </div>
+        `
+        },
+        messaging: {
+            title: "Brand Messaging",
+            content: `
+        <div class="service-details">
+            <h3>Crafting Your Brand's Voice</h3>
+            <p>We develop a compelling brand messaging strategy that communicates your values and connects with your audience.</p>
+            
+            <h4>Messaging Components:</h4>
+            <ul>
+                <li>Brand story development</li>
+                <li>Tagline and slogan creation</li>
+                <li>Core message framework</li>
+                <li>Content guidelines for consistency</li>
+                <li>Social media messaging strategies</li>
+            </ul>
+            
+            <h4>Impact of Strong Brand Messaging:</h4>
+            <ul>
+                <li>Increased brand awareness</li>
+                <li>Stronger emotional connection with customers</li>
+                <li>Clear differentiation from competitors</li>
+                <li>Enhanced customer engagement</li>
+            </ul>
+        </div>
+        `
+        },
+        visualIdentity: {
+            title: "Visual Identity",
+            content: `
+        <div class="service-details">
+            <h3>Creating a Memorable Visual Identity</h3>
+            <p>We design a cohesive visual identity that reflects your brand's personality and values.</p>
+            
+            <h4>Visual Identity Elements:</h4>
+            <ul>
+                <li>Logo design and variations</li>
+                <li>Color palette selection</li>
+                <li>Typography guidelines</li>
+                <li>Imagery and iconography style</li>
+                <li>Brand collateral design (business cards, brochures, etc.)</li>
+            </ul>
+            
+            <h4>Benefits of a Strong Visual Identity:</h4>
+            <ul>
+                <li>Increased brand recognition</li>
+                <li>Professional and polished appearance</li>
+                <li>Consistency across all marketing materials</li>
+                <li>Enhanced customer trust and credibility</li>
+            </ul>
+        </div>
+        `
+        },
+        marketing: {
+            title: "Integrated Marketing",
+            content: `
+        <div class="service-details">
+            <h3>Holistic Marketing Strategies</h3>
+            <p>We develop integrated marketing strategies that align all your marketing efforts for maximum impact.</p>
+            
+            <h4>Key Components:</h4>
+            <ul>
+                <li>Cross-channel marketing campaigns</li>
+                <li>Content marketing strategies</li>
+                <li>Social media integration</li>
+                <li>Email marketing and automation</li>
+                <li>Performance tracking and analytics</li>
+            </ul>
+            
+            <h4>Advantages of Integrated Marketing:</h4>
+            <ul>
+                <li>Consistent brand messaging</li>
+                <li>Improved customer experience</li>
+                <li>Higher engagement rates</li>
+                <li>Better ROI on marketing spend</li>
+            </ul>
+        </div>
+        `
+        },
+        management: {
+            title: "Brand Management",
+            content: `
+        <div class="service-details">
+            <h3>Ongoing Brand Support</h3>
+            <p>We provide comprehensive brand management services to ensure your brand remains relevant and impactful.</p>
+            
+            <h4>Management Services:</h4>
+            <ul>
+                <li>Brand audits and assessments</li>
+                <li>Reputation management strategies</li>
+                <li>Brand guidelines development</li>
+                <li>Monitoring brand performance</li>
+                <li>Stakeholder engagement strategies</li>
+            </ul>
+            
+            <h4>Benefits of Effective Brand Management:</h4>
+            <ul>
+                <li>Stronger brand equity</li>
+                <li>Increased customer loyalty</li>
+                <li>Proactive issue resolution</li>
+                <li>Alignment with market trends</li>
+            </ul>
+        </div>
+        `
         }
     };
 

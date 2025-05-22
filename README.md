@@ -68,8 +68,12 @@ NovaLayer/                ← root
 │   │   │   └── home.html
 │   │   ├── scripts/
 │   │   │   ├── form.js
+│   │   │   ├── service.js
+│   │   │   ├── particle.js
+│   │   │   ├── firebase.js
 │   │   │   └── script.js
 │   │   └── styles/
+│   │       ├── service.css
 │   │       ├── footer.css
 │   │       ├── form.css
 │   │       └── style.css

@@ -22,6 +22,11 @@ body {
     overflow-x: hidden;
 }
 
+.read-more-link {
+    color: var(--accent);
+    cursor: pointer;
+}
+
 /* Particle Background */
 #particles-js {
     position: fixed;
