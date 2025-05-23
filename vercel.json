@@ -1,34 +1,86 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "backend/server.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "public/**/*",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/submit-form",
-        "dest": "backend/server.js",
-        "methods": ["POST"]
-      },
-      {
-        "src": "/home",
-        "dest": "public/src/service-pages/home.html"
-      },
-      {
-        "src": "/",
-        "dest": "/index.html"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/submit-form",
+      "dest": "backend/server.js",
+      "methods": ["POST"]
+    },
   
-  
+    
+    {
+      "src": "/service/web-development",
+      "dest": "/public/src/service-pages/service-webdev.html"
+    },
+    {
+      "src": "/service/logo-design",
+      "dest": "/public/src/service-pages/service-logo.html"
+    },
+    {
+      "src": "/service/script-writing",
+      "dest": "/public/src/service-pages/service-script.html"
+    },
+    {
+      "src": "/service/thumbnail-design",
+      "dest": "/public/src/service-pages/service-thumb.html"
+    },
+    {
+      "src": "/service/video-production",
+      "dest": "/public/src/service-pages/service-video.html"
+    },
+    {
+      "src": "/service/branding",
+      "dest": "/public/src/service-pages/service-brand.html"
+    },
+    {
+      "src": "/home",
+      "dest": "/public/src/service-pages/home.html"
+    },
+    
+    {
+      "src": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    },
+
+    {
+      "src": "/src/styles/(.*)",
+      "dest": "/public/src/styles/$1"
+    },
+    {
+      "src": "/src/scripts/(.*)",
+      "dest": "/public/src/scripts/$1"
+    }
+  ]
+}
